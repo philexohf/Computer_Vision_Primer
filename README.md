@@ -1,1 +1,3 @@
-# 计算机视觉入门练习代码
+# Computer Vision
+# Python3.6
+# OpenCV
