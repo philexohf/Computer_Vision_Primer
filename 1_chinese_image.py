@@ -1,6 +1,7 @@
 import cv2
 import cn_txt
 
+
 img = cv2.imread('test.jpg')
 
 line = '月亮岛'
