@@ -1,6 +1,6 @@
 import cv2
 
-# 获得视频的格式
+
 videoCapture = cv2.VideoCapture('ow_reunion.mp4')
 
 # 获得码率及尺寸
