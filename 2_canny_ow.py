@@ -2,8 +2,8 @@ import cv2
 import cn_txt
 
 
-line = '安徽国防电气学院'
-pos = (100, 100)
+line = '计算机视觉入门课程'
+position = (100, 100)
 text_size = 100
 colorBGR = (255, 0, 0)
 cnTxt = cn_txt.put_chinese_text('Monaco Yahei.ttf')
@@ -30,7 +30,7 @@ while success:
     grayImage = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     cannyImage = cv2.Canny(grayImage, 30, 150)
     dst = cv2.bitwise_and(frame, frame, mask=cannyImage)
-    cndst = cnTxt.draw_text(dst, pos, line, text_size, colorBGR)
+    cndst = cnTxt.draw_text(dst, position, line, text_size, colorBGR)
     cv2.imshow('dstVideo', cndst)
     out.write(cndst)
     qKey = cv2.waitKey(int(1000 / fps))  # 延迟
