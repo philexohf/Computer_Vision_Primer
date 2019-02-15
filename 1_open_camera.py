@@ -1,8 +1,7 @@
 import cv2
 
-# 获得视频的格式
-videoCapture = cv2.VideoCapture(0)
 
+videoCapture = cv2.VideoCapture(0)
 size = (int(videoCapture.get(cv2.CAP_PROP_FRAME_WIDTH)),
         int(videoCapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 print('size={}'.format(size))
