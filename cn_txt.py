@@ -7,22 +7,10 @@ class put_chinese_text(object):
         self._face = freetype.Face(ttf)
 
     def draw_text(self, image, pos, text, text_size, text_color):
-        '''
-        draw chinese(or not) text with ttf
-        :param image:     image(numpy.ndarray) to draw text
-        :param pos:       where to draw text
-        :param text:      the context, for chinese should be unicode type
-        :param text_size: text size
-        :param text_color:text color
-        :return:          image
-        '''
         self._face.set_char_size(text_size * 64)
         metrics = self._face.size
         ascender = metrics.ascender / 64.0
 
-        # descender = metrics.descender/64.0
-        # height = metrics.height/64.0
-        # linegap = height - ascender + descender
         ypos = int(ascender)
 
         if not isinstance(text, str):
@@ -31,14 +19,6 @@ class put_chinese_text(object):
         return img
 
     def draw_string(self, img, x_pos, y_pos, text, color):
-        '''
-        draw string
-        :param x_pos: text x-postion on img
-        :param y_pos: text y-postion on img
-        :param text:  text (unicode)
-        :param color: text color
-        :return:      image
-        '''
         prev_char = 0
         pen = freetype.Vector()
         pen.x = x_pos << 6  # div 64
@@ -70,13 +50,6 @@ class put_chinese_text(object):
         return image
 
     def draw_ft_bitmap(self, img, bitmap, pen, color):
-        '''
-        draw each char
-        :param bitmap: bitmap
-        :param pen:    pen
-        :param color:  pen color e.g.(0,0,255) - red
-        :return:       image
-        '''
         x_pos = pen.x >> 6
         y_pos = pen.y >> 6
         cols = bitmap.width
