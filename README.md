@@ -1,1 +1,1 @@
-# Computer_Vision_Primer
+# 计算机视觉入门练习代码
