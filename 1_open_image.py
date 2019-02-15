@@ -1,5 +1,6 @@
 import cv2
 
+
 path = "C:/Users/Administrator/Pictures/"
 img = cv2.imread(path + 'ev.jpg')
 cv2.namedWindow('img', 0)
