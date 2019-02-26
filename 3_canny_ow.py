@@ -1,12 +1,12 @@
 import cv2
-import cn_txt
+import cn_word
 
 
 line = '计算机视觉入门课程'
 position = (100, 100)
 text_size = 100
 colorBGR = (255, 0, 0)
-cnTxt = cn_txt.put_chinese_text('Monaco Yahei.ttf')
+cnTxt = cn_word.put_chinese_text('Monaco Yahei.ttf')
 # 获得视频，需要在项目目录下放入名为ow_reunion.mp4的视频。
 videoCapture = cv2.VideoCapture('ow_reunion.mp4')
 
