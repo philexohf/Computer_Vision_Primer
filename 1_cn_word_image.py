@@ -10,7 +10,7 @@ cnWord = '月亮岛'
 position = (100, 100)
 text_size = 48
 colorBGR = (255, 0, 0)
-cnTxt = cn_word.put_chinese_text('Monaco Yahei.ttf')
+cnTxt = cn_word.put_chinese_text('SourceHanSansCN-ExtraLight.otf')
 
 dstImg = cnTxt.draw_text(srcImg, position, cnWord, text_size, colorBGR)
 cv2.namedWindow('cnWord', 0)
