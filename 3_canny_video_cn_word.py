@@ -2,18 +2,17 @@ import cv2
 import cn_word
 
 
-line = '计算机视觉入门课程'
+line = '计算机视觉'
 position = (100, 100)
 text_size = 100
 colorBGR = (255, 0, 0)
 cnTxt = cn_word.put_chinese_text('Monaco Yahei.ttf')
-# 获得视频，需要在项目目录下放入名为ow_reunion.mp4的视频。
-videoCapture = cv2.VideoCapture('ow_reunion.mp4')
+cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')
 
 # 获得码率及尺寸
-fps = videoCapture.get(cv2.CAP_PROP_FPS)
-size = (int(videoCapture.get(cv2.CAP_PROP_FRAME_WIDTH)),
-        int(videoCapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+fps = cap.get(cv2.CAP_PROP_FPS)
+size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
+        int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 
 print('fps={}, size={}'.format(fps, size))
 
@@ -23,7 +22,8 @@ out = cv2.VideoWriter('output.mp4', saveImage, fps, size)
 cv2.namedWindow('Video', 0)
 cv2.namedWindow('dstVideo', 0)
 # 读帧
-success, frame = videoCapture.read()
+success, frame = cap.read()
+
 while success:
     cv2.imshow('Video', frame)
     frame = cv2.GaussianBlur(frame, (3, 3), 0)
@@ -36,6 +36,6 @@ while success:
     qKey = cv2.waitKey(int(1000 / fps))
     if qKey == (ord('q') or ord('Q')):
         break
-    success, frame = videoCapture.read()  # 获取下一帧
+    success, frame = cap.read()  # 获取下一帧
 
-videoCapture.release()
+cap.release()
