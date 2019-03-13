@@ -11,8 +11,8 @@ blurImg = np.hstack([
         # img, kernel, std
         cv2.GaussianBlur(img, (3, 3), 0),
         cv2.GaussianBlur(img, (9, 9), 0),
-        cv2.GaussianBlur(img, (21, 21), 0),
-        cv2.GaussianBlur(img, (49, 49), 0)
+        cv2.GaussianBlur(img, (81, 81), 0),
+        cv2.GaussianBlur(img, (201, 201), 0)
     ])
 
 plt.figure(figsize=(10, 8))
