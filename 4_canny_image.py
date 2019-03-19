@@ -1,7 +1,7 @@
 import cv2
 
 
-img = cv2.imread("test.jpg")
+img = cv2.imread("./image/test.jpg")
 cv2.namedWindow('img', 0)
 cv2.namedWindow('cannyImage', 0)
 

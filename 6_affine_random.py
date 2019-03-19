@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import random
 
-srcImg = cv2.imread('summer.png')
+srcImg = cv2.imread('./image/summer.png')
 cv2.namedWindow('srcImg')
 cv2.namedWindow('test', 0)
 cv2.imshow('srcImg', srcImg)

@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 
-srcImg = cv2.imread('summer.png')  # 前景图像
-bgImg = cv2.imread('earth_light.jpg')  # 背景图像
+srcImg = cv2.imread('./image/summer.png')  # 前景图像
+bgImg = cv2.imread('./image/earth_light.jpg')  # 背景图像
 cv2.namedWindow('dst', 1)
 
 while True:

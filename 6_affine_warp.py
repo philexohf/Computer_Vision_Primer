@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-img = cv2.imread('summer.png')
+img = cv2.imread('./image/summer.png')
 cv2.imshow('srcImg', img)
 # 沿着横纵轴放大1.6倍，然后平移(-150,-240)，最后沿原图大小截取，等效于裁剪并放大
 cropArr = np.array([

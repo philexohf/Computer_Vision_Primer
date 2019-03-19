@@ -12,8 +12,8 @@ def laplacian_operate(affineImage):
         channel[:] = channel * NIA
     cv2.merge(channels, affineImage)
 
-srcImg = cv2.imread('xs.jpg')  # 前景图像
-bgImg = cv2.imread('earth_light.jpg')  # 背景图像
+srcImg = cv2.imread('./image/xs.jpg')  # 前景图像
+bgImg = cv2.imread('./image/earth_light.jpg')  # 背景图像
 # cv2.imshow('hnj', srcImg)
 cv2.namedWindow('dst', 0)
 # 循环处理图片帧

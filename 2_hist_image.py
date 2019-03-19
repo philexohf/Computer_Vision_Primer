@@ -21,7 +21,7 @@ def colorHist(image, color):
 
 
 if __name__ == '__main__':
-    original_img = cv2.imread("summer.png")
+    original_img = cv2.imread("./image/summer.png")
     img = cv2.resize(original_img, None, fx=0.6, fy=0.6, interpolation=cv2.INTER_CUBIC)
     b, g, r = cv2.split(img)
 
