@@ -1,7 +1,7 @@
 import cv2
 
 
-srcImg = cv2.imread("summer.png")
+srcImg = cv2.imread("./image/summer.png")
 cv2.imshow('summer', srcImg)
 
 # 构造一个3×3的结构元素
