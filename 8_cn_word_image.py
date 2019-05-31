@@ -2,7 +2,7 @@ import cv2
 import cn_word
 
 
-srcImg = cv2.imread('test.jpg')
+srcImg = cv2.imread('./image/test.jpg')
 cv2.namedWindow('picture', 0)
 cv2.imshow("picture", srcImg)
 
