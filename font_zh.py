@@ -1,8 +1,8 @@
-import freetype
+import freetype  # pip install freetype-py
 import copy
 
 
-class put_chinese_text(object):
+class GetFont(object):
     def __init__(self, ttf):
         self._face = freetype.Face(ttf)
 
