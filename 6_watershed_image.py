@@ -19,5 +19,7 @@ markers[255 == x] = 0
 
 markers = cv2.watershed(image, markers)
 image[-1 == markers] = [255, 0, 0]
+plt.xticks([])
+plt.yticks([])
 plt.imshow(image)
 plt.show()
