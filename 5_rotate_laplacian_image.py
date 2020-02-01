@@ -24,6 +24,7 @@ while True:
         cv2.Laplacian(grayImg, cv2.CV_8U, grayImg, 5)  # edgeKsize = 5
 
         invGrayImg = (1.0 / 255) * (255 - grayImg)
+        global lapRotImg
         channels = cv2.split(rotImg)
         for channel in channels:
             channel[:] = channel * invGrayImg
