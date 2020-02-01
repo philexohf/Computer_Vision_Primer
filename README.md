@@ -1,3 +1,11 @@
-# Computer Vision
-# Python3.6
-# OpenCV3.4
+# Computer Vision with Python (OpenCV)
+## 1. 图像、视频文件的读写与显示
+## 2. trackbar、颜色及直方图绘制
+## 3. 图像滤波（平滑与锐化）
+## 4. 边缘检测
+## 5. 图像仿射变换
+## 6. 图像分割与形态学处理
+## 7. 目标检测与识别
+## 8. 目标跟踪
+## 9. 基于OpenCV的神经网络应用
+## 其他
