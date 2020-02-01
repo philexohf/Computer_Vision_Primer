@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')
+cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')  # 设置你自己的视频文件路径
 # 获得码率及尺寸
 fps = cap.get(cv2.CAP_PROP_FPS)
 size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),

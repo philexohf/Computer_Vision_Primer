@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-srcImg = cv2.imread('./image/yzq0.png')  # 前景图像
+srcImg = cv2.imread('./image/tamamonomae0.png')  # 前景图像
 bgImg = cv2.imread('./image/earth_light.jpg')  # 背景图像
 cv2.namedWindow('Edge', 0)
 cv2.namedWindow('InvEdge', 0)

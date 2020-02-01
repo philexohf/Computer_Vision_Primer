@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img = cv2.imread('./image/summer.png')
+img = cv2.imread('./image/whj.png')
 cv2.namedWindow('srcImg', 0)
 cv2.imshow('srcImg', img)
 

@@ -1,6 +1,6 @@
 import cv2
 
-img = cv2.imread("./image/yzq2.png")
+img = cv2.imread("./image/tamamonomae1.png")
 cv2.namedWindow('srcImg')
 cv2.namedWindow('cannyImage')
 

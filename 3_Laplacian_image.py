@@ -4,7 +4,7 @@ import os
 import matplotlib.pyplot as plt
 
 path = "./image"
-img = cv2.imread(os.path.join(path, 'yzq2.png'))  # os.path.join()路径拼接
+img = cv2.imread(os.path.join(path, 'tamamonomae1.png'))  # os.path.join()路径拼接
 # 卷积核
 kernel_1 = np.array([
     [-1, -1, -1],
