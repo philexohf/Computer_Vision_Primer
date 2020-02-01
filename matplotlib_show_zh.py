@@ -8,6 +8,6 @@ pl.rcParams['axes.unicode_minus'] = False
 x = [1, 2, 3, 4, 5, ]
 y = [6, 7, 4, 8, 3, ]
 plt.plot(x, y)
-plt.title('matplotlib为什么不能显示汉字', fontproperties=font)
+plt.title('matplotlib显示汉字', fontproperties=font)
 
 plt.show()

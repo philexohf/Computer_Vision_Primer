@@ -1,12 +1,11 @@
 import cv2
-import numpy as np
 
 bgImg = cv2.imread('./image/test.jpg')
 logoImg = cv2.imread('./image/hfut_logo.jpg')
 
 rows, cols, channels = logoImg.shape
 roi = bgImg[0:rows, 0:cols]
-# Now create a mask of logo and create its inverse mask also
+# 创建mask of logo和inverse mask
 img2gray = cv2.cvtColor(logoImg, cv2.COLOR_BGR2GRAY)
 ret, mask = cv2.threshold(img2gray, 175, 255, cv2.THRESH_BINARY)
 mask_inv = cv2.bitwise_not(mask)

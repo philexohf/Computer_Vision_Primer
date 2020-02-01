@@ -1,7 +1,6 @@
 import cv2
 import os
 
-
 path = "./image"
 path_temp = "./image_temp"
 
@@ -21,9 +20,7 @@ def bgr2hsv(path):
 
 
 def bgr2ycrcb(path):
-
     file_names = os.listdir(path)
-
     for fileName in file_names:
         exam_name = fileName[:-4]
         img_type = fileName.split('.')[-1]
@@ -34,6 +31,5 @@ def bgr2ycrcb(path):
 
 
 if __name__ == '__main__':
-
     bgr2hsv(path)
     bgr2ycrcb(path)

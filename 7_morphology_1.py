@@ -1,6 +1,5 @@
 import cv2
 
-
 srcImg = cv2.imread("./image/summer.png")
 cv2.imshow('summer', srcImg)
 

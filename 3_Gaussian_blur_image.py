@@ -1,6 +1,6 @@
 import cv2
 import os
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 path = "./image"
@@ -15,7 +15,9 @@ blurImg = np.hstack([
         cv2.GaussianBlur(img, (201, 201), 0)
     ])
 
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(20, 16))
+plt.xticks(())
+plt.yticks(())
 plt.imshow(blurImg[:, :, ::-1])
 plt.show()
 

@@ -1,6 +1,5 @@
 import cv2
 
-
 img = cv2.imread("./image/summer.png")
 cv2.imshow('src', img)
 # img[:, :, 2] = 0  # 红色通道置零

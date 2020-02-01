@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-
 drawing = False  # 当鼠标按下时变为 True
 mode = True  # 如果 mode 为 true 绘制矩形。按下'm' 变成绘制曲线
 ix, iy = -1, -1
@@ -42,8 +41,8 @@ cv2.setMouseCallback('image', draw_circle)
 
 while True:
     cv2.imshow('image', img)
-    k = cv2.waitKey(1) & 0xFF
-    if k == ord('m'):
+    key = cv2.waitKey(1) & 0xFF
+    if key == ord('m'):
         mode = not mode
-    elif k == 27:
+    elif key == 27:
         break

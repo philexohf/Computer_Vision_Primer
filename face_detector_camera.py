@@ -2,16 +2,14 @@ import cv2
 import random
 import numpy as np
 
-
 cap = cv2.VideoCapture(0)
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
-
+face_cascade = cv2.CascadeClassifier('./data/haarcascade_frontalface_alt2.xml')
 fps = int(cap.get(cv2.CAP_PROP_FPS))
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-
-text = "hfut"
+text = "Camera"
+cv2.namedWindow('Camera')
 while True:
     success, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
@@ -28,7 +26,5 @@ while True:
 
     # 将原图片和添加文字后的图片拼接起来
     res = np.hstack([frame, AddText])
-    cv2.imshow("test", res)
+    cv2.imshow("Camera", res)
     cv2.waitKey(int(1000 / fps))
-
-cap.release()

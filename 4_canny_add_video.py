@@ -1,32 +1,30 @@
 import cv2
 
-
 cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')
 # 获得码率及尺寸
 fps = cap.get(cv2.CAP_PROP_FPS)
 size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
         int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-
 print('fps={}, size={}'.format(fps, size))
-
-saveImage = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.mp4', saveImage, fps, size)
-
-cv2.namedWindow('Video', 0)
-cv2.namedWindow('dstVideo', 0)
+# saveImage = cv2.VideoWriter_fourcc(*'XVID')
+# out = cv2.VideoWriter('output.mp4', saveImage, fps, size)
+cv2.namedWindow('video', 0)
+cv2.namedWindow('canny', 0)
 # 读帧
 success, frame = cap.read()
+
 while success:
-    cv2.imshow('Video', frame)
+    cv2.imshow('video', frame)
     frame = cv2.GaussianBlur(frame, (3, 3), 0)
     grayImg = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     cannyImg = cv2.Canny(grayImg, 50, 150)
     dst = cv2.bitwise_and(frame, frame, mask=cannyImg)
-    cv2.imshow('dstVideo', dst)
-    out.write(dst)
+    cv2.imshow('canny', dst)
+    # out.write(dst)
     qKey = cv2.waitKey(int(1000 / fps))
     if qKey == (ord('q') or ord('Q')):
         break
     success, frame = cap.read()  # 获取下一帧
 
+cv2.destroyAllWindows()
 cap.release()

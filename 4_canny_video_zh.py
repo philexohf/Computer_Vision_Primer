@@ -1,12 +1,11 @@
 import cv2
-import cn_word
-
+import font_zh
 
 line = '计算机视觉'
 position = (100, 100)
 text_size = 100
 colorBGR = (255, 0, 0)
-cnTxt = cn_word.put_chinese_text('SourceHanSansCN-ExtraLight.otf')
+cnTxt = font_zh.put_chinese_text('SourceHanSansCN-ExtraLight.otf')
 cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')
 
 # 获得码率及尺寸
