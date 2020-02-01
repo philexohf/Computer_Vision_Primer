@@ -1,8 +1,8 @@
 import cv2
 
 path = "D:/DataSets/VideoDataSets"  # 视频文件存放的绝对路径
-cap = cv2.VideoCapture(path + 'Paris.mp4')
-# get()方法获得码率及尺寸
+cap = cv2.VideoCapture(path + 'Paris.mp4')  # Paris.mp4改成你自己的文件名
+# 使用get()方法获得码率及尺寸
 fps = cap.get(cv2.CAP_PROP_FPS)  # 视频帧率
 # 视频文件尺寸
 size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),

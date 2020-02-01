@@ -5,7 +5,7 @@ fourcc = cv2.VideoWriter_fourcc(*'MP4V')  # 指定视频编解码器
 out = cv2.VideoWriter('video_gen.mp4', fourcc, 1.0, (960, 720), True)  # 为构造函数指定视频文件名称
 
 
-# 图像生成器
+# 图像生成器，对生成器不熟悉的同学自己查看Python生成器的内容
 def read_image():
     img_dir = './image/'
     img_list = os.listdir(img_dir)
