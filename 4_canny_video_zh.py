@@ -5,19 +5,15 @@ line = '计算机视觉'
 position = (100, 100)
 text_size = 100
 colorBGR = (255, 0, 0)
-cnTxt = font_zh.put_chinese_text('SourceHanSansCN-ExtraLight.otf')
+cnTxt = font_zh.GetFont('./font/SourceHanSansCN-Light.otf')
 cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')
-
 # 获得码率及尺寸
 fps = cap.get(cv2.CAP_PROP_FPS)
 size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
         int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-
 print('fps={}, size={}'.format(fps, size))
-
-saveImage = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.mp4', saveImage, fps, size)
-
+# saveImage = cv2.VideoWriter_fourcc(*'XVID')
+# out = cv2.VideoWriter('output.mp4', saveImage, fps, size)
 cv2.namedWindow('Video', 0)
 cv2.namedWindow('dstVideo', 0)
 # 读帧
@@ -31,10 +27,11 @@ while success:
     dst = cv2.bitwise_and(frame, frame, mask=cannyImage)
     cndst = cnTxt.draw_text(dst, position, line, text_size, colorBGR)
     cv2.imshow('dstVideo', cndst)
-    out.write(cndst)
+    # out.write(cndst)
     qKey = cv2.waitKey(int(1000 / fps))
     if qKey == (ord('q') or ord('Q')):
         break
     success, frame = cap.read()  # 获取下一帧
 
+cv2.destroyAllWindows()
 cap.release()
