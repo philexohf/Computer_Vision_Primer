@@ -1,7 +1,7 @@
 import cv2
 
 bgImg = cv2.imread('./image/test.jpg')
-logoImg = cv2.imread('./image/hfut_logo.jpg')
+logoImg = cv2.imread('./image/github.png')
 
 rows, cols, channels = logoImg.shape
 roi = bgImg[0:rows, 0:cols]
