@@ -47,8 +47,8 @@ output = np.hstack([
     ])
 
 plt.figure(figsize=(20, 16))
-plt.xticks(())
-plt.yticks(())
+plt.xticks([])
+plt.yticks([])
 plt.imshow(output[:, :, ::-1])
 plt.show()
 
