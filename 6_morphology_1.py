@@ -1,3 +1,4 @@
+# ============程序功能：图像的形态学处理============== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 

@@ -1,3 +1,4 @@
+# ========程序功能：用GrabCut算法实现图像分割========= #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np
