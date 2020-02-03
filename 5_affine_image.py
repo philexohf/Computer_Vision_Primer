@@ -1,3 +1,4 @@
+# ==程序功能：用仿射矩阵对图像进行缩放和旋转等仿射变换== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np

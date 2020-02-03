@@ -1,3 +1,4 @@
+# ===程序功能：仿射变换、边缘检测和图像融合的综合应用=== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np

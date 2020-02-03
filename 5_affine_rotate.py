@@ -1,3 +1,4 @@
+# ==程序功能：用仿射矩阵处理图像使图像绕中心点顺时针旋转== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np
