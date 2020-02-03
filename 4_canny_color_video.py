@@ -20,9 +20,9 @@ while success:
     frame = cv2.GaussianBlur(frame, (3, 3), 0)
     grayImg = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     cannyImg = cv2.Canny(grayImg, 50, 150)
-    dst = cv2.bitwise_and(frame, frame, mask=cannyImg)
-    cv2.imshow('canny', dst)
-    # out.write(dst)
+    dstImg = cv2.bitwise_and(frame, frame, mask=cannyImg)
+    cv2.imshow('canny', dstImg)
+    # out.write(dstImg)
     quitKey = cv2.waitKey(int(1000 / fps))
     if quitKey == (ord('q') or ord('Q')):
         break
