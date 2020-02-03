@@ -2,7 +2,7 @@ import cv2
 import os
 
 path = "./image"
-path_temp = "./image_temp"
+path_temp = "./temp"
 
 
 def bgr2hsv(path):
