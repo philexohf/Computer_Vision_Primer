@@ -1,3 +1,5 @@
+# ===程序功能：将image文件夹中的所有图片合并成一个视频文件=== #
+# https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import os
 

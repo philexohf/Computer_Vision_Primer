@@ -1,3 +1,5 @@
+# ==========程序功能：读取视频文件并按帧率播放========= #
+# https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 
 path = "D:/DataSets/VideoDataSets"  # 视频文件存放的绝对路径

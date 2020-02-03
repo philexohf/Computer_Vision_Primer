@@ -1,3 +1,5 @@
+# ===程序功能：读取image文件夹中的一幅图片并在窗口显示出来=== #
+# https://github.com/philexohf/Computer_Vision_Primer
 import cv2  # 导入OpenCV软件包
 
 img = cv2.imread('./image/lancelot_guinevere.jpg')  # 读取当前目录下的图片.

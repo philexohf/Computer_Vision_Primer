@@ -1,3 +1,4 @@
+# https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 
 img = cv2.imread('./image/mercy2.jpg')
