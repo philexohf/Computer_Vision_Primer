@@ -1,3 +1,4 @@
+# ===程序功能：BGR颜色通道的操作=== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 

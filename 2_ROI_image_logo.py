@@ -1,3 +1,4 @@
+# ========程序功能：在图片的ROI区域添加LOGO========= #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 

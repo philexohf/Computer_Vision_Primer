@@ -1,3 +1,4 @@
+# ===========程序功能：彩色图像直方图的绘制============ #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np
