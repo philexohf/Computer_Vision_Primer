@@ -1,3 +1,4 @@
+# ========程序功能：基于HSV颜色空间的目标跟踪========= #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np

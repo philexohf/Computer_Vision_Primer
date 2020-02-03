@@ -1,3 +1,4 @@
+# ===========程序功能：在图片上添加中文============== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import font_zh

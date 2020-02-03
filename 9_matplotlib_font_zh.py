@@ -1,3 +1,4 @@
+# ====程序功能：在matplotlib绘制的图像上显示中文==== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import matplotlib.pyplot as plt
 import matplotlib as pl
