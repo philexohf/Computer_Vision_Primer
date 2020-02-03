@@ -1,3 +1,4 @@
+# ========程序功能：绘制各种颜色的矩形和曲线========== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np

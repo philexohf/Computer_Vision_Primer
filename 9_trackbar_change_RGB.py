@@ -1,3 +1,4 @@
+# ===程序功能：用trackbar调节RGB的数值来显示各种颜色=== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np
