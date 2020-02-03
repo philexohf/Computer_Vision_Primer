@@ -1,3 +1,4 @@
+# ========程序功能：用HOG检测图片中是否有人=========== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 

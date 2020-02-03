@@ -1,3 +1,4 @@
+# ===============程序功能：霍夫直线检测============== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np
