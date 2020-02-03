@@ -1,3 +1,4 @@
+# =====程序功能：用Canny算子处理摄像头帧的图像效果====== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 
@@ -18,8 +19,8 @@ while success:
     cannyImg = cv2.Canny(grayImg, 30, 150)
     # out.write(cannyImg)
     cv2.imshow('canny', cannyImg)
-    qKey = cv2.waitKey(int(1000 / 30))
-    if qKey == (ord('q') or ord('Q')):
+    quitKey = cv2.waitKey(int(1000 / 30))
+    if quitKey == (ord('q') or ord('Q')):
         break
     success, frame = cap.read()
 

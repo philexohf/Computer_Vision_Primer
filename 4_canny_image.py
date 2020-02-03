@@ -1,3 +1,4 @@
+# ====程序功能：用Canny算子处理灰度图像得到物体边缘===== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 

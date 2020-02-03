@@ -1,3 +1,4 @@
+# ===程序功能：用Canny算子处理视频图像并添加中文logo=== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import font_zh
@@ -7,7 +8,7 @@ position = (100, 100)
 text_size = 100
 colorBGR = (255, 0, 0)
 cnTxt = font_zh.GetFont('./font/SourceHanSansCN-Light.otf')
-cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')
+cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')  # 改成你自己的视频文件路径
 # 获得码率及尺寸
 fps = cap.get(cv2.CAP_PROP_FPS)
 size = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
@@ -29,8 +30,8 @@ while success:
     cndst = cnTxt.draw_text(dst, position, line, text_size, colorBGR)
     cv2.imshow('dstVideo', cndst)
     # out.write(cndst)
-    qKey = cv2.waitKey(int(1000 / fps))
-    if qKey == (ord('q') or ord('Q')):
+    quitKey = cv2.waitKey(int(1000 / fps))
+    if quitKey == (ord('q') or ord('Q')):
         break
     success, frame = cap.read()  # 获取下一帧
 
