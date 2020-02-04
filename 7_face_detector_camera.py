@@ -1,7 +1,6 @@
 # =================程序功能：人脸检测=============== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
-# import numpy as np
 
 cap = cv2.VideoCapture(0)
 # 导入haar分类器文件
@@ -25,13 +24,10 @@ while success:
 
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), color, 2, cv2.LINE_AA)
-    addTextImg = frame.copy()
-    cv2.putText(addTextImg, text, (60, 100), cv2.FONT_HERSHEY_COMPLEX, 1.0, color, 2)
+ 
+    cv2.putText(frame, text, (60, 100), cv2.FONT_HERSHEY_COMPLEX, 1.0, color, 2)
 
-    # # 将原图片和添加文字后的图片拼接起来
-    # res = np.hstack([frame, AddText])
-    # cv2.imshow("Camera", res)
-    cv2.imshow('Camera', addTextImg)
+    cv2.imshow('Camera', frame)
     cv2.waitKey(int(1000 / fps))
 
     success, frame = cap.read()
