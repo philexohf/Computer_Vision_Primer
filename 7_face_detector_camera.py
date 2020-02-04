@@ -1,32 +1,38 @@
 # =================程序功能：人脸检测=============== #
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
-import random
-import numpy as np
+# import numpy as np
 
 cap = cv2.VideoCapture(0)
+# 导入分类器文件
 face_cascade = cv2.CascadeClassifier('./data/haarcascade_frontalface_alt2.xml')
+# 使用get()方法获取摄像头帧率、图像尺寸等参数
 fps = int(cap.get(cv2.CAP_PROP_FPS))
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-text = "Camera"
+print(f'fps = {fps}, size = {width, height}')
+
+text = "Face Detector"
+color = (0., 255., 0)
+
 cv2.namedWindow('Camera')
-while True:
-    success, frame = cap.read()
-    gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-    gray = cv2.equalizeHist(gray)
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+success, frame = cap.read()
+
+while success:
+    grayImg = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+    grayImg = cv2.equalizeHist(grayImg)
+    faces = face_cascade.detectMultiScale(grayImg, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
     for (x, y, w, h) in faces:
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (random.randint(0, 255),
-                                                  random.randint(0, 255),
-                                                  random.randint(0, 255)),
-                      3, cv2.LINE_AA)
-    AddText = frame.copy()
-    cv2.putText(AddText, text, (60, 100), cv2.FONT_HERSHEY_COMPLEX, 1.0, (100, 200, 200), 3)
+        cv2.rectangle(frame, (x, y), (x+w, y+h), color, 2, cv2.LINE_AA)
+    addTextImg = frame.copy()  # 获取frame的copy
+    cv2.putText(addTextImg, text, (60, 100), cv2.FONT_HERSHEY_COMPLEX, 1.0, color, 2)
 
-    # 将原图片和添加文字后的图片拼接起来
-    res = np.hstack([frame, AddText])
-    cv2.imshow("Camera", res)
+    # # 将原图片和添加文字后的图片拼接起来
+    # res = np.hstack([frame, AddText])
+    # cv2.imshow("Camera", res)
+    cv2.imshow('Camera', addTextImg)
     cv2.waitKey(int(1000 / fps))
+
+    success, frame = cap.read()
