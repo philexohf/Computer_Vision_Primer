@@ -24,13 +24,12 @@ if __name__ == '__main__':
     img = cv2.resize(original_img, None, fx=0.6, fy=0.6, interpolation=cv2.INTER_CUBIC)
     b, g, r = cv2.split(img)
 
-    hist_channelB = color_hist(b, [255, 0, 0])
-    hist_channelG = color_hist(g, [0, 255, 0])
-    hist_channelR = color_hist(r, [0, 0, 255])
+    hist_B = color_hist(b, [255, 0, 0])
+    hist_G = color_hist(g, [0, 255, 0])
+    hist_R = color_hist(r, [0, 0, 255])
+    hist_RGB = np.hstack([hist_R, hist_G, hist_B])
 
-    cv2.imshow("hist_B", hist_channelB)
-    cv2.imshow("hist_G", hist_channelG)
-    cv2.imshow("hist_R", hist_channelR)
+    cv2.imshow('hist', hist_RGB)
     cv2.imshow("img", img)
 
     cv2.waitKey(0)
