@@ -2,7 +2,7 @@
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 
-img = cv2.imread("./image/raspberry.jpg")
+img = cv2.imread("./image/tamamonomae1.png")
 cv2.namedWindow('srcImg')
 cv2.namedWindow('cannyImage')
 

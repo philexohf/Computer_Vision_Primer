@@ -16,8 +16,8 @@ for i in houghCircle[0, :]:
     cv2.circle(img, (i[0], i[1]), i[2], color, 2)  # 画外圆
     cv2.circle(img, (i[0], i[1]), 2, color, 3)  # 画圆心
 
-cv2.namedWindow('HoughCirles', 0)
-cv2.imshow('HoughCirles', img)
+cv2.namedWindow('HoughCircles', 0)
+cv2.imshow('HoughCircles', img)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

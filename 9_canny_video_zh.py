@@ -3,10 +3,10 @@
 import cv2
 import font_zh
 
-line = '计算机视觉'
+line = '正在前往好莱坞'
 position = (100, 100)
-text_size = 100
-colorBGR = (255, 0, 0)
+text_size = 60
+colorBGR = (128, 0, 255)
 cnTxt = font_zh.GetFont('./font/SourceHanSansCN-Light.otf')
 cap = cv2.VideoCapture('D:/DataSets/VideoDataSets/Paris.mp4')  # 改成你自己的视频文件路径
 # 获得码率及尺寸
