@@ -3,8 +3,8 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(0)
-ret, frame = cap.read()
+camera = cv2.VideoCapture(0)
+ret, frame = camera.read()
 # 设置窗口的初始位置
 c, r, w, h = 400, 300, 300, 200
 trackWindow = (c, r, w, h)
@@ -20,7 +20,7 @@ cv2.normalize(hist, hist, 0, 255, cv2.NORM_MINMAX)
 termCriteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 1)
 
 while True:
-    ret, frame = cap.read()
+    ret, frame = camera.read()
     if ret:
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
         dst = cv2.calcBackProject([hsv], [0], hist, [0, 180], 1)
@@ -39,4 +39,4 @@ while True:
         break
 
 cv2.destroyAllWindows()
-cap.release()
+camera.release()
