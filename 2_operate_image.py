@@ -1,3 +1,5 @@
+# ====程序功能：图像的加减乘除和与或非异或运算===== #
+# https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 import numpy as np
 '''
