@@ -1,4 +1,6 @@
 {
     "editor.fontSize": 18,
-    "backgroundCover.opacity": 0.5
+    "backgroundCover.opacity": 0.5,
+    "backgroundCover.imagePath": "D:\\PycharmProjects\\pic\\",
+    "backgroundCover.randomImageFolder": "D:\\PycharmProjects\\pic\\"
 }
