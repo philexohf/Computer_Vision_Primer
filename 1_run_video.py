@@ -2,7 +2,7 @@
 # https://github.com/philexohf/Computer_Vision_Primer
 import cv2
 
-path = "D:/DataSets/VideoDataSets"  # 视频文件存放的绝对路径
+path = "D:/DataSets/VideoDataSets/"  # 视频文件存放的绝对路径
 cap = cv2.VideoCapture(path + 'Paris.mp4')  # Paris.mp4改成你自己的文件名
 
 # 使用get()方法获取视频帧率fps及图像尺寸size
