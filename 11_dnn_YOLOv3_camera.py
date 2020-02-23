@@ -18,10 +18,14 @@ with open(classesFile, 'rt') as f:
 # YOLOv3网络文件
 modelConfiguration = './data/yolov3-tiny.cfg'
 modelWeights = 'D:/DataSets/model/yolov3-tiny.weights'  # .weights文件需要自己下载放入对应文件夹
+# modelConfiguration = './data/yolov3.cfg'
+# modelWeights = 'D:/DataSets/model/yolov3.weights'  # .weights文件需要自己下载放入对应文件夹
+
 # 加载网络
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeights)
 model.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
-model.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
+model.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)  # 使用CPU
+# model.setPreferableTarget(cv2.dnn.DNN_TARGET_OPENCL_FP16)  # 调用显卡加速推理（OPENCL，FP16）
 
 
 # Get the names of the output layers
@@ -52,16 +56,14 @@ def draw_predict(class_id, conf, left, top, right, bottom):
     cv2.putText(frame, label, (left, top), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 0), 1)
 
 
-# 置信度过低时移除边界框
+# 扫描所有输出边界框，只保留高置信度边界框，并将得分最高的类指定为方框的类标签。
 def post_process(frame, outs):
     frame_height = frame.shape[0]
     frame_width = frame.shape[1]
-    # Scan through all the bounding boxes output from the network and
-    # keep only the ones with high confidence scores.
-    # Assign the box's class label as the class with the highest score.
     class_ids = []
     confidences = []
     boxes = []
+
     for out in outs:
         for detection in out:
             scores = detection[5:]
