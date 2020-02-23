@@ -27,6 +27,7 @@ for c in contours:
     img = cv2.circle(img, center, radius, (0, 255, 0), 2)
 
 cv2.drawContours(img, contours, -1, (255, 0, 0), 1)
+cv2.namedWindow('contours', 0)
 cv2.imshow('contours', img)
 cv2.waitKey(0)
 
