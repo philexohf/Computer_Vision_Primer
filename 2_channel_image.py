@@ -9,7 +9,7 @@ dstImg = img.copy()  # 获取一个img图像数据的copy
 # dstImg[:, :, 1] = 0  # 绿色通道置零
 # dstImg[:, :, 0] = 0  # 蓝色通道置零
 dstImg[250:600, 200:400, 1] = 0  # 区域(高：250-600，宽：200-400)绿色通道置零
-dst = np.hstack([img, dstImg])
+dst = np.hstack([img, dstImg])  # img和dstImg图像水平拼接
 cv2.namedWindow('BGR-channel', 0)
 cv2.imshow('BGR-channel', dst)
 
