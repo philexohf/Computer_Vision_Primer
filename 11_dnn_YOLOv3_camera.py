@@ -16,16 +16,16 @@ with open(classesFile, 'rt') as f:
     classes = f.read().rstrip('\n').split('\n')
 
 # YOLOv3网络文件
-modelConfiguration = './data/yolov3-tiny.cfg'
-modelWeights = 'D:/DataSets/model/yolov3-tiny.weights'  # .weights文件需要自己下载放入对应文件夹
-# modelConfiguration = './data/yolov3.cfg'
-# modelWeights = 'D:/DataSets/model/yolov3.weights'  # .weights文件需要自己下载放入对应文件夹
+# modelConfiguration = './data/yolov3-tiny.cfg'
+# modelWeights = 'D:/DataSets/model/yolov3-tiny.weights'  # .weights文件需要自己下载放入对应文件夹
+modelConfiguration = './data/yolov3.cfg'
+modelWeights = 'D:/DataSets/model/yolov3.weights'  # .weights文件需要自己下载放入对应文件夹
 
 # 加载网络
 model = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeights)
 model.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
-model.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)  # 使用CPU
-# model.setPreferableTarget(cv2.dnn.DNN_TARGET_OPENCL_FP16)  # 调用显卡加速推理（OPENCL，FP16）
+# model.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)  # 使用CPU
+model.setPreferableTarget(cv2.dnn.DNN_TARGET_OPENCL_FP16)  # 调用显卡加速推理（OPENCL，FP16）
 
 
 # Get the names of the output layers
